@@ -6,7 +6,7 @@ Jefe::Jefe(){
 
 }
 
-Jefe::Jefe(int vidaJ, int defensaJ, int attJ):Monstruo(nombreM, itemDebi){
+Jefe::Jefe(int vidaJ, int defensaJ, int attJ, string nombreM, Item* itemDebi):Monstruo(nombreM, itemDebi){
   this->vidaJ = vidaJ;
   this-> defensaJ =defensaJ;
   this->attJ = attJ;
@@ -14,6 +14,9 @@ Jefe::Jefe(int vidaJ, int defensaJ, int attJ):Monstruo(nombreM, itemDebi){
 
 int Jefe::getVidaJ(){
   return vidaJ;
+}
+void Jefe::setVidaJ(int vidaJ){
+  this->vidaJ = vidaJ;
 }
 int Jefe::getDefensaJ(){
   return defensaJ;

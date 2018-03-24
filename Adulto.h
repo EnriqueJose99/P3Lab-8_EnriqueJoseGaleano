@@ -17,6 +17,7 @@ public:
    int getDefenaA();
    int getMasterSword();
    int getSpecialAttack();
+  void write(ofstream&);
 
 };
 #endif

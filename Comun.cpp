@@ -17,6 +17,9 @@ Comun::Comun(int vidaC, int defensaC, int attC, string nombreM, Item* itemDebi):
 int Comun::getVidaC(){
   return vidaC;
 }
+void Comun::setVidaC(int vidaC){
+  this->vidaC = vidaC;
+}
 int Comun::getDefensaC(){
   return defensaC;
 }

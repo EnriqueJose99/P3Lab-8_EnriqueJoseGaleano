@@ -22,13 +22,13 @@ Heroe.o: Heroe.cpp Heroe.h Item.h
 Item.o: Item.cpp Item.h
 	g++ -c Item.cpp
 
-Joven.o: Joven.cpp Joven.h Heroe.h
+Joven.o: Joven.cpp Joven.h Heroe.h Item.h
 	g++ -c Joven.cpp
 
 Monstruo.o:  Monstruo.cpp Monstruo.h
 	g++ -c Monstruo.cpp
 
-Jefe.o: Jefe.cpp Jefe.h Monstruo.h
+Jefe.o: Jefe.cpp Jefe.h Monstruo.h Item.h
 	g++ -c Jefe.cpp
 
 SemiJefe.o: SemiJefe.cpp SemiJefe.h Monstruo.h

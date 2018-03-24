@@ -2,7 +2,12 @@
 #define  HEREO_H
 #include <iostream>
 #include "Item.h"
+#include "Monstruo.h"
+#include "Jefe.h"
+#include "SemiJefe.h"
+#include "Comun.h"
 #include <string>
+#include <fstream>
 
 
 class Heroe{
@@ -24,7 +29,10 @@ class Heroe{
     int getCantidadJefes();
     void setDinero(int);
     int getDinero();
-
+    virtual void ataqueHeroe(Jefe*);
+    virtual void ataqueHeroe(SemiJefe*);
+    virtual void ataqueHeroe(Comun*);
+    void write(ofstream&);
 
 };
 #endif

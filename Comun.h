@@ -18,6 +18,7 @@ public:
 
   int getVidaC();
   int getDefensaC();
+  void setVidaC(int);
   int getAttC();
 };
 #endif

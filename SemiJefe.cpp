@@ -19,6 +19,10 @@ int SemiJefe::getVidaSJ(){
   return vidaSJ;
 }
 
+void SemiJefe::setVidaSJ(int vidaSJ){
+  this->vidaSJ = vidaSJ;
+}
+
 int SemiJefe::getDefensaSJ(){
   return defensaSJ;
 }

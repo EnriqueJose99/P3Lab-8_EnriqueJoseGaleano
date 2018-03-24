@@ -14,6 +14,7 @@ public:
   SemiJefe(int, int, int, string, Item*);
 
   int getVidaSJ();
+  void setVidaSJ(int);
   int getDefensaSJ();
   int getAttSJ();
 

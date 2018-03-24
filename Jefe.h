@@ -1,6 +1,7 @@
 #ifndef JEFE_H
 #define JEFE_H
 #include "Monstruo.h"
+#include "Item.h"
 #include <iostream>
 using namespace std;
 
@@ -11,9 +12,10 @@ public:
   int attJ;
 
   Jefe();
-  Jefe(int, int, int);
+  Jefe(int, int, int, string, Item*);
 
   int getVidaJ();
+  void setVidaJ(int);
   int getDefensaJ();
   int getAttJ();
 

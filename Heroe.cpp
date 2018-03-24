@@ -1,4 +1,5 @@
 #include "Heroe.h"
+#include "Monstruo.h"
 #include <string>
 #include <iostream>
 
@@ -39,4 +40,32 @@ void Heroe::setDinero(int dinero){
 }
 int Heroe::getDinero(){
   return dinero;
+}
+
+void Heroe::ataqueHeroe(Jefe* monstruo1){
+  int vidaM = monstruo1->getVidaJ();
+  if (this->vida > 0) {
+    this->vida-=vidaM;
+  }
+}
+void Heroe::ataqueHeroe(SemiJefe* monstruo2){
+  int vidaM1 = monstruo2->getVidaSJ();
+  if (this->vida>0) {
+    this->vida-=vidaM1;
+  }
+}
+void Heroe::ataqueHeroe(Comun* monstruo3){
+  int vidaM2 = monstruo3->getVidaC();
+  if (this->vida>0) {
+    this->vida-=vidaM2;
+  }
+}
+void Heroe::write(ofstream& out){
+  int size=nombre.size();
+  out.write(reinterpret_cast<char*>(&size),sizeof(int));
+  out.write(nombre.data(),size);
+  out.write(reinterpret_cast<char*>(&vida),sizeof(int));
+  out.write(reinterpret_cast<char*>(&items),sizeof(int));
+  out.write(reinterpret_cast<char*>(&cantidadJefes),sizeof(int));
+  out.write(reinterpret_cast<char*>(&dinero),sizeof(int));
 }
