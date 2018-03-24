@@ -16,7 +16,7 @@ Bomba.o: Bomba.cpp Bomba.h Item.h
 Bumeran.o: Bumeran.cpp Bumeran.h Item.h
 	g++ -c Bumeran.cpp
 
-Heroe.o: Heroe.cpp Heroe.h Item.h
+Heroe.o: Heroe.cpp Heroe.h Item.h Jefe.h SemiJefe.h Comun.h Monstruo.h
 	g++ -c Heroe.cpp
 
 Item.o: Item.cpp Item.h
@@ -25,7 +25,7 @@ Item.o: Item.cpp Item.h
 Joven.o: Joven.cpp Joven.h Heroe.h Item.h
 	g++ -c Joven.cpp
 
-Monstruo.o:  Monstruo.cpp Monstruo.h
+Monstruo.o:  Monstruo.cpp Monstruo.h Item.h
 	g++ -c Monstruo.cpp
 
 Jefe.o: Jefe.cpp Jefe.h Monstruo.h Item.h
