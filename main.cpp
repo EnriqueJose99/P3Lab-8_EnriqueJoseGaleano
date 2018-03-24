@@ -144,47 +144,51 @@ int main() {
       for (int i = 0; i < mon.size(); i++) {
         cout<<"Hay Monstruos para luchar!!"<<endl;
       }
-      cout<<"----Luchar----"<<endl;
-      cout<<"Contra que quiere luchar"<<endl;
-      cout<<"1.Jefe"<<endl;
-      cout<<"2.Semi Jefe"<<endl;
-      cout<<"3.Comun"<<endl;
-      cin>>opcLuchar;
-      if (opcLuchar == 1) {
-        jov->ataqueJoven2(jefe);
-        cout<<jov->getVida()<<endl;
-        cout<<jefe->getVidaJ()<<endl;
-        if (jefe->getVidaJ() < 0) {
-          cout<<"Usted mato un monstruo comun"<<endl;
-        }else{
-          cout<<"El monstruo sigue con vida"<<endl;
-          vidaTiene = 4;
+      if (mon.size() > 0) {
+        cout<<"----Luchar----"<<endl;
+        cout<<"Contra que quiere luchar"<<endl;
+        cout<<"1.Jefe"<<endl;
+        cout<<"2.Semi Jefe"<<endl;
+        cout<<"3.Comun"<<endl;
+        cin>>opcLuchar;
+        if (opcLuchar == 1) {
+          jov->ataqueJoven2(jefe);
+          cout<<jov->getVida()<<endl;
+          cout<<jefe->getVidaJ()<<endl;
+          if (jefe->getVidaJ() < 0) {
+            cout<<"Usted mato un monstruo comun"<<endl;
+          }else{
+            cout<<"El monstruo sigue con vida"<<endl;
+            vidaTiene = 4;
+          }
         }
-      }
-      if (opcLuchar == 2) {
-        jov->ataqueJoven1(semij);
-        cout<<jov->getVida()<<endl;
-        cout<<semij->getVidaSJ()<<endl;
-        if (semij->getVidaSJ() < 0) {
-          cout<<"Usted mato un monstruo comun"<<endl;
-        }else{
-          cout<<"El monstruo sigue con vida"<<endl;
-          dineroTiene = 100;
+        if (opcLuchar == 2) {
+          jov->ataqueJoven1(semij);
+          cout<<jov->getVida()<<endl;
+          cout<<semij->getVidaSJ()<<endl;
+          if (semij->getVidaSJ() < 0) {
+            cout<<"Usted mato un monstruo comun"<<endl;
+          }else{
+            cout<<"El monstruo sigue con vida"<<endl;
+            dineroTiene = 100;
+
+          }
 
         }
 
-      }
-
-      if (opcLuchar == 3) {
-        jov->ataqueJoven(comunP);
-        cout<<jov->getVida()<<endl;
-        cout<<comunP->getVidaC()<<endl;
-        if (comunP->getVidaC() < 0) {
-          cout<<"Usted mato un monstruo comun"<<endl;
-        }else{
-          cout<<"El monstruo sigue con vida"<<endl;
-          dineroTiene = 40;
+        if (opcLuchar == 3) {
+          jov->ataqueJoven(comunP);
+          cout<<jov->getVida()<<endl;
+          cout<<comunP->getVidaC()<<endl;
+          if (comunP->getVidaC() < 0) {
+            cout<<"Usted mato un monstruo comun"<<endl;
+          }else{
+            cout<<"El monstruo sigue con vida"<<endl;
+            dineroTiene = 40;
+          }
         }
+      }else{
+        cout<<"No ha monstruos"<<endl;
       }
       break;
     }
