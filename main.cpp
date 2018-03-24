@@ -68,7 +68,7 @@ int main() {
     bomba = new Bomba(10, nombreI, colorI);
   }
   item = new Item(nombreI, colorI);
-  heroe = new Heroe(nombreH, vidaH, 0, 0, item);// agregar contador al final de heroes derrotados
+  heroe = new Heroe(nombreH, vidaH, 0, dineroTiene, item);// agregar contador al final de heroes derrotados
   jov = new Joven(2, 4, nombreH, vidaH, 0, 0, item);
   while (opc != 7) {
     switch (opc = menu()) {
@@ -158,6 +158,7 @@ int main() {
           cout<<"Usted mato un monstruo comun"<<endl;
         }else{
           cout<<"El monstruo sigue con vida"<<endl;
+          vidaTiene = 4;
         }
       }
       if (opcLuchar == 2) {
@@ -168,6 +169,8 @@ int main() {
           cout<<"Usted mato un monstruo comun"<<endl;
         }else{
           cout<<"El monstruo sigue con vida"<<endl;
+          dineroTiene = 100;
+
         }
 
       }
@@ -180,6 +183,7 @@ int main() {
           cout<<"Usted mato un monstruo comun"<<endl;
         }else{
           cout<<"El monstruo sigue con vida"<<endl;
+          dineroTiene = 40;
         }
       }
       break;
