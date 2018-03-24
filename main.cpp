@@ -130,7 +130,6 @@ int main() {
         break;
       }
       case 3:{
-
         cout<<"----Bienvenido a la tienda----"<<endl;
         if (heroe->getDinero()>=200) {
           cout<<"Usted compro un corazon que le otorga +4 de vida"<<endl;
@@ -154,7 +153,7 @@ int main() {
         if (opcLuchar == 1) {
           jov->ataqueJoven2(jefe);
           cout<<jov->getVida()<<endl;
-          cout<<jefe->getVidaJ()<<endl;
+          cout<<"La vida que tiene el mountruo aun es: "<<jefe->getVidaJ()<<endl;
           if (jefe->getVidaJ() < 0) {
             cout<<"Usted mato un monstruo comun"<<endl;
           }else{
@@ -165,7 +164,7 @@ int main() {
         if (opcLuchar == 2) {
           jov->ataqueJoven1(semij);
           cout<<jov->getVida()<<endl;
-          cout<<semij->getVidaSJ()<<endl;
+          cout<<"La vida que tiene el mountruo aun es: "<<semij->getVidaSJ()<<endl;
           if (semij->getVidaSJ() < 0) {
             cout<<"Usted mato un monstruo comun"<<endl;
           }else{
@@ -179,7 +178,7 @@ int main() {
         if (opcLuchar == 3) {
           jov->ataqueJoven(comunP);
           cout<<jov->getVida()<<endl;
-          cout<<comunP->getVidaC()<<endl;
+          cout<<"La vida que tiene el mountruo aun es: "<<comunP->getVidaC()<<endl;
           if (comunP->getVidaC() < 0) {
             cout<<"Usted mato un monstruo comun"<<endl;
           }else{
